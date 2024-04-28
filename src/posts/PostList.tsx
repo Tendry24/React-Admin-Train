@@ -1,5 +1,5 @@
 //import * as React from "react";
-import { List, Datagrid, TextField, useRedirect ,FunctionField,ReferenceField } from 'react-admin';
+import { List, Datagrid, TextField, useRedirect ,FunctionField,ReferenceField,EditButton } from 'react-admin';
 import { Button } from "@mui/material";
 
 const PostList = (props :any) => {
@@ -24,6 +24,7 @@ const PostList = (props :any) => {
                         <Button onClick={() => handleCommentRedirect(record.id)}>View Comments</Button>
                     )}
                 />
+                <EditButton />
             </Datagrid>
         </List>
     );

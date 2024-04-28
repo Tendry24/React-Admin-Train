@@ -9,6 +9,8 @@ import { PostEdit } from "./posts/PostEdit"
 import PostList from "./posts/PostList";
 import PostCreate from "./posts/PostCreate";
 import CommentList from "./comments/CommentList";
+import CommentEdit from "./comments/CommentEdit";
+import CommentCreate from "./comments/CommentCreate";
 //import { CommentList, CommentEdit, CommentCreate } from './comments';
 
 import dataProvider from "./dataProvider";
@@ -29,5 +31,5 @@ import dataProvider from "./dataProvider";
 
 export const App = () => <Admin dataProvider={dataProvider}>
         <Resource name="posts" list={PostList} edit={PostEdit} show={PostList} create={PostCreate} /*edit={PostEdit} create={PostCreate}*/ />
-        <Resource name="comments" list={CommentList} /*list={CommentList} edit={CommentEdit} create={CommentCreate}*/ />
+        <Resource name="comments" list={CommentList} show={ShowGuesser} edit={CommentEdit} create={CommentCreate} />
 </Admin>;

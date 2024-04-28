@@ -1,5 +1,5 @@
 import * as React from "react";
-import { List, Datagrid, TextField } from 'react-admin';
+import { List, Datagrid, TextField,EditButton } from 'react-admin';
 
 const CommentList = (props: any) => (
     <List {...props}>
@@ -7,6 +7,7 @@ const CommentList = (props: any) => (
             <TextField source="id" />
             <TextField source="name" />
             <TextField source="email" />
+            <EditButton />
         </Datagrid>
     </List>
 );
