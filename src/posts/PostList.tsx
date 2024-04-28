@@ -4,14 +4,13 @@ import { Button } from "@mui/material";
 
 const PostList = (props :any) => {
     const redirect = useRedirect();
-    const handleCommentRedirect = (id : number) => {
+    const handleRedirect = (id : number) => {
         redirect(`/posts/${id}/comments`);
     };
 
     return (
         
-        <List {...props}> 
-            
+        <List {...props}>  
             <Datagrid>
                 <TextField source="id" />
                 <TextField source="title" />
@@ -21,7 +20,7 @@ const PostList = (props :any) => {
                 <FunctionField
                     label="View Comments"
                     render={(record: any) => (
-                        <Button onClick={() => handleCommentRedirect(record.id)}>View Comments</Button>
+                        <Button onClick={() => handleRedirect(record.id)}>View Comments</Button>
                     )}
                 />
                 <EditButton />
